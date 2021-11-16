@@ -26,11 +26,11 @@ public class DndCharacter {
         wisdom = GenerateAbilityValue();
         charisma = GenerateAbilityValue();
 
-        hitPoint = 10 + modifier(3);
+        hitPoint = 10 + modifier(constitution);
     }
 
     private int modifier (int constitution) {
-        return (int)Math.floor((constitution - 10) / 2);
+        return (int)Math.floor(((double) constitution - 10) / 2);
     }
 
     private int GenerateAbilityValue() {
