@@ -19,12 +19,12 @@ public class DndCharacter {
     private int hitPoint;
 
     public DndCharacter(){
-        strength = GenerateAbilityValue();
-        dexterity = GenerateAbilityValue();
-        constitution = GenerateAbilityValue();
-        intelligence = GenerateAbilityValue();
-        wisdom = GenerateAbilityValue();
-        charisma = GenerateAbilityValue();
+        strength = generateAbilityValue();
+        dexterity = generateAbilityValue();
+        constitution = generateAbilityValue();
+        intelligence = generateAbilityValue();
+        wisdom = generateAbilityValue();
+        charisma = generateAbilityValue();
 
         hitPoint = 10 + modifier(constitution);
     }
@@ -33,7 +33,7 @@ public class DndCharacter {
         return (int)Math.floor(((double) constitution - 10) / 2);
     }
 
-    private int GenerateAbilityValue() {
+    private int generateAbilityValue() {
         return IntStream.generate(() -> r.nextInt(7)).limit(4).sorted().skip(1).sum();
     }
 }
