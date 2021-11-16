@@ -29,7 +29,7 @@ public class DndCharacter {
         hitPoint = 10 + modifier(constitution);
     }
 
-    private int modifier (int constitution) {
+    public static int modifier (int constitution) {
         return (int)Math.floor(((double) constitution - 10) / 2);
     }
 
