@@ -34,6 +34,6 @@ public class DndCharacter {
     }
 
     private int generateAbilityValue() {
-        return IntStream.generate(() -> r.nextInt(7)).limit(4).sorted().skip(1).sum();
+        return IntStream.generate(() -> r.nextInt(6)+1).limit(4).sorted().skip(1).sum();
     }
 }
