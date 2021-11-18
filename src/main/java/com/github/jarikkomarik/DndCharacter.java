@@ -36,7 +36,8 @@ public class DndCharacter {
     }
 
     public int generateAbilityValue(int a, int b, int c, int d) {
-        return Arrays.stream(new int []{a,b,c,d})
+        return Arrays
+                .stream(new int []{a,b,c,d})
                 .sorted()
                 .skip(1)
                 .sum();
